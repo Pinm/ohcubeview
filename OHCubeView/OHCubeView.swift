@@ -9,15 +9,14 @@
 import UIKit
 
 @available(iOS 9.0, *)
-@objc protocol OHCubeViewDelegate: class {
-    
+@objc public protocol OHCubeViewDelegate: class {
     @objc optional func cubeViewDidScroll(_ cubeView: OHCubeView)
 }
 
 @available(iOS 9.0, *)
 open class OHCubeView: UIScrollView, UIScrollViewDelegate {
     
-    weak var cubeDelegate: OHCubeViewDelegate?
+    open weak var cubeDelegate: OHCubeViewDelegate?
     
     fileprivate let maxAngle: CGFloat = 60.0
     
